@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Posts</string>
+    <string name="upload">upload</string>
+    <string name="favs">favs</string>
+    <string name="add">add</string>
+    <string name="title">Title</string>
+    <string name="body">Body</string>
+</resources>

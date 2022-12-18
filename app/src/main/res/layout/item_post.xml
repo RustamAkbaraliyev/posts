@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="88dp"
+    android:background="?selectableItemBackground"
+    android:paddingHorizontal="16dp">
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/btnFav"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageButton
+        android:id="@+id/btnFav"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="?selectableItemBackgroundBorderless"
+        android:contentDescription="@string/app_name"
+        android:padding="8dp"
+        android:src="@drawable/ic_baseline_favorite_border_24"
+        app:layout_constraintRight_toLeftOf="@id/imgStatus"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/blue" />
+
+    <ImageView
+        android:id="@+id/imgStatus"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_refresh_new"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/blue" />
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/progressCircular"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:indeterminate="true"
+        android:padding="4dp"
+        android:visibility="gone"
+        app:indicatorColor="@color/blue"
+        app:indicatorSize="24dp"
+        app:layout_constraintBottom_toBottomOf="@id/imgStatus"
+        app:layout_constraintLeft_toLeftOf="@id/imgStatus"
+        app:layout_constraintRight_toRightOf="@id/imgStatus"
+        app:layout_constraintTop_toTopOf="@id/imgStatus" />
+
+    <TextView
+        android:id="@+id/txtDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="8dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        app:layout_constraintTop_toBottomOf="@id/txtTitle" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

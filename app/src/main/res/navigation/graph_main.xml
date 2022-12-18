@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/graph_main"
+    app:startDestination="@id/dashboardScreen">
+
+    <fragment
+        android:id="@+id/dashboardScreen"
+        android:name="uz.xsoft.blog.ui.screens.DashboardScreen"
+        android:label="DashboardScreen"
+        tools:layout="@layout/screen_dashboard">
+        <action
+            android:id="@+id/action_dashboardScreen_to_favScreen"
+            app:destination="@id/favScreen" />
+        <action
+            android:id="@+id/action_dashboardScreen_to_infoScreen"
+            app:destination="@id/infoScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/favScreen"
+        android:name="uz.xsoft.blog.ui.screens.FavScreen"
+        android:label="FavScreen"
+        tools:layout="@layout/screen_fav" >
+        <action
+            android:id="@+id/action_favScreen_to_infoScreen"
+            app:destination="@id/infoScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/infoScreen"
+        android:name="uz.xsoft.blog.ui.screens.InfoScreen"
+        android:label="InfoScreen"
+        tools:layout="@layout/screen_info">
+        <argument
+            android:name="postData"
+            app:argType="uz.xsoft.blog.data.models.common.PostData" />
+    </fragment>
+</navigation>
